@@ -13,10 +13,6 @@ if (mysqli_num_rows($hasil) > 0) {
 
 
 
-
-if (password_verify($password $data['password'])) {
-    
-
     if (password_verify($password, $data['password'])) {
         $_SESSION['login']          =true;
         $_SESSION['id_user']        =$data['id_user'];
@@ -41,5 +37,5 @@ if (password_verify($password $data['password'])) {
     header('Location: login.php');
     exit;
    }
-}
+
 ?>

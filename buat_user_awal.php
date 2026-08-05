@@ -3,7 +3,7 @@ include 'config/koneksi.php';
 
 $nama     ='administrator';
 $username ='admin';
-$password = passworde_hash('admin123',PASSWORD_DEFAULT);
+$password = password_hash('admin123',PASSWORD_DEFAULT);
 $role     ='admin';
 
 $sql = "INSERT INTO tbl_user (nama_lengkap, username, password, role)";
