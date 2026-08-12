@@ -32,13 +32,13 @@ form {
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
-/* h1, h2, .title {
+h1, h2, .title {
   font-size: 1.5rem;
   font-weight: 700;
   color: #2c3e50;
   text-align: center;
   margin-bottom: 24px;
-  line-height: 1.3; */
+  line-height: 1.3;
 }
 .form-group {
   margin-bottom: 20px;

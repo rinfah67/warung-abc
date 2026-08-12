@@ -1,4 +1,3 @@
-<?php include'include/cek_session.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,13 +9,12 @@
         <table>
             <tr><td>Kode Barang</td><td>:</td>
         <td><input type="text" name="kode_barang" required></td></tr>
-        <table>
             <tr><td>Nama Barang</td><td>:</td>
         <td><input type="text" name="nama_barang" required></td></tr>
-        <table>
             <tr><td>Harga Satuan</td><td>:</td>
         <td><input type="number" name="harga_satuan" step="0,01" required></td></tr>
-        <table>
+            <tr><td>Stok</td><td>:</td>
+        <td><input type="number" name="stok" required></td></tr>
             <tr><td>Tanggal Kadaluarsa</td><td>:</td>
         <td><input type="date" name="tanggal_kadaluarsa" required></td></tr>
         <tr><td colspan="3"><input type="submit" value="Simpan"></td></tr>

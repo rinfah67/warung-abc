@@ -1,6 +1,4 @@
 <?php
-// transaksi.php
-session_start();
 include 'includes/cek_session.php';
 include 'config/koneksi.php';
 
@@ -46,7 +44,8 @@ foreach ($_SESSION['keranjang'] as $item) {
                 <td><?php echo $item['nama_barang']; ?></td>
                 <td><?php echo number_format($item['harga'], 0, ',', '.'); ?></td>
                 <td><?php echo $item ['jumlah']; ?></td>
-                <td><a href="hapus_keranjang.php?id=<?php echo $id_barang; ?>">Hapus</a><?php echo number_format($item['harga'], 0, ',', '.'); ?></td>
+                <td><?php echo number_format($item['subtotal'], 0, ',', '.');?></td>
+                <td><a href="hapus_keranjang.php?id=<?php echo $id_barang; ?>">Hapus</a></td>
             </tr>
             <?php } ?>
             <tr><td colspan="3">Total</td>
