@@ -17,8 +17,8 @@ foreach ($_SESSION['keranjang'] as $item) {
     $total += $item['subtotal'];
 }
 
-$sql = "INSERT INTO tbl_transaksi (no_transaksi, tanggal, id_kasir, id_pelanggan, total_bayar)
-        VALUES ('$no_transaksi', '$tanggal', '$id_kasir', NULL, '$total')";
+$sql = "INSERT INTO tbl_transaksi (no_transaksi, tanggal, id_kasir, id_pelanggan, total_bayar)";
+$sql .=  " VALUES ('$no_transaksi', '$tanggal', '$id_kasir', NULL, '$total')";
 mysqli_query($koneksi, $sql);
 
 $id_transaksi = mysqli_insert_id($koneksi);
@@ -27,8 +27,8 @@ foreach ($_SESSION['keranjang'] as $id_barang => $item) {
     $jumlah = $item['jumlah'];
     $subtotal = $item['subtotal'];
 
-    $detail = "INSERT INTO tbl_detail_transaksi (id_transaksi, id_barang, jumlah, subtotal)
-               VALUES ('$id_transaksi', '$id_barang', '$jumlah', '$subtotal')";
+    $detail = "INSERT INTO tbl_detail_transaksi (id_transaksi, id_barang, jumlah, subtotal)";
+    $detail .=  " VALUES ('$id_transaksi', '$id_barang', '$jumlah', '$subtotal')";
     mysqli_query($koneksi, $detail);
 
     $update_stok = "UPDATE tbl_barang SET stok = stok - $jumlah WHERE id_barang = '$id_barang'";
