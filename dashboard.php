@@ -14,6 +14,7 @@ include 'includes/cek_session.php';
     <ul>
         <?php if ($_SESSION['role'] == 'admin' ||  $_SESSION['role'] == 'gudang') { ?>
         <li><a href="data_barang.php">Data Barang</a></li>
+        <li><a href="data_pelanggan.php">Data Pelanggan</a></li>
      <?php } ?>
 
         <?php if ($_SESSION['role'] == 'admin' || $_SESSION['role'] == 'kasir') { ?> 

@@ -14,7 +14,7 @@ $hasil = mysqli_query($koneksi, $sql);
 <body>
     <h1>Data Pelanggan</h1>
     <p><a href="dashboard.php">Kembali ke Dashboard</a> | 
-        <a href="tamba_pelanggan.php">Tambah Pelanggan</a></p>
+        <a href="tambah_pelanggan.php">Tambah Pelanggan</a></p>
         <table border="1" cellpadding="6">
             <tr><th>Nama Pelanggan</th><th>No. HP</th><th>Alamat</th>Aksi</tr>
             <?php while ($row = mysqli_fetch_assoc($hasil)) { ?>
